@@ -1,0 +1,2 @@
+(keyboard-translate ?\C-j ?\C-x)
+(keyboard-translate ?\C-x ?\C-j)
