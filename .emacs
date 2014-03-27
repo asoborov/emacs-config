@@ -1,3 +1,6 @@
+;; my username and email
+(setq user-mail-address "soborov@actimind.com")
+
 (require 'package)
 (require 'cl)
 (require 'saveplace)
@@ -25,7 +28,9 @@
                             helm-projectile
                             dired+
                             rvm
+                            textile-mode
                             ample-theme
+                            expand-region
                             php-mode)
   "Default packages")
 
@@ -41,6 +46,24 @@
     (when (not (package-installed-p pkg))
       (package-install pkg))))
 
+;; expand-region
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+
+;; my keybindings
+;; other-window-kill-buffer
+(defun other-window-kill-buffer ()
+  "Kill the buffer in the other window"
+  (interactive)
+  ;; Window selection is used because point goes to a different window
+  ;; if more than 2 windows are present
+  (let ((win-curr (selected-window))
+        (win-other (next-window)))
+    (select-window win-other)
+    (kill-this-buffer)
+    (select-window win-curr)))
+
+(global-set-key (kbd "C-x K") 'other-window-kill-buffer)
 ;; wrap lines by words
 (global-visual-line-mode t)
 
@@ -51,6 +74,10 @@
 (delete-selection-mode t)
 (transient-mark-mode t)
 (setq x-select-enable-clipboard t)
+
+;; no blinking cursor
+(blink-cursor-mode 0)
+(global-hl-line-mode t)
 
 ;; change window title
 (when window-system
@@ -90,9 +117,19 @@
 (flx-ido-mode 1)
 (setq ido-use-faces nil)
 
+;; enable undo-tree everywhere
+(global-undo-tree-mode t)
+
 ;; autocomplete config
 (require 'auto-complete-config)
 (ac-config-default)
+
+;; textile mode
+(require 'textile-mode)
+(add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-mode))
+
+;; add Gemfile to 'auto-mode
+(add-to-list 'auto-mode-alist '("\\Gemfile\\'" . ruby-mode))
 
 ;; projectile settings
 (projectile-global-mode)
@@ -109,11 +146,13 @@
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
 ;; show line numbers
-(linum-mode t)
+(global-linum-mode t)
 
 ;; hotkey for helm-mini
-(global-set-key (kbd "C-i") 'helm-mini)
+(global-set-key (kbd "<f7>") 'helm-mini)
 
+;; hook for projectile-rails
+(add-hook 'projectile-mode-hook 'projectile-rails-on)
 
 ;; make undo commands using undo-tree
 (global-set-key (kbd "C-/") 'undo-tree-undo)
@@ -146,4 +185,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "gray13" :foreground "#bdbdb3" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "unknown" :family "Ubuntu Mono")))))
+ '(default ((t (:inherit nil :stipple nil :background "gray13" :foreground "#bdbdb3" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "unknown" :family "Ubuntu Mono"))))
+ '(fringe ((t (:background "#1f1f1f" :foreground "#888")))))

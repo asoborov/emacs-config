@@ -1,4 +1,12 @@
-((("yasnippet" .
+((("projectile-global-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("yasnippet" .
    [1 0 0 0 0 0 0 0 0])
-  ("projectile-global-mode" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])))
+  ("require" .
+   [1 0 0 0 0 0 0])
+  ("textile-mode" .
+   [0 0 0 0 0 0 0 0 0 0 1 1])
+  ("add-to-list" .
+   [0 0 0 0 0 0 0 0 0 1 0])
+  ("auto-mode-alist" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])))

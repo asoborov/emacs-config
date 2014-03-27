@@ -1,2 +1,7 @@
 ;;; -*- coding: utf-8 -*-
-(("/home/asoborov/.ido.last" . 8100))
+(("/home/asoborov/.emacs" . 3114)
+ ("/home/asoborov/.ido.last" . 9155)
+ ("/home/asoborov/.recentf" . 290)
+ ("/home/asoborov/Workspace/staas/GUIDELINES.textile" . 591)
+ ("/home/asoborov/Workspace/staas/app/views/test_beds/_form.html.haml" . 1029)
+ ("/home/asoborov/Workspace/staas/app/views/tests/new.html.haml" . 1802))

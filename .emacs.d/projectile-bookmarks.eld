@@ -1,1 +1,1 @@
-("~/" "~/Workspace/staas/")
+("~/Workspace/staas/" "~/")
