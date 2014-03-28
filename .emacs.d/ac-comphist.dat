@@ -1,12 +1,22 @@
-((("projectile-global-mode" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("yasnippet" .
-   [1 0 0 0 0 0 0 0 0])
-  ("require" .
-   [1 0 0 0 0 0 0])
-  ("textile-mode" .
-   [0 0 0 0 0 0 0 0 0 0 1 1])
+((("projectile-enable-caching" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("setq" .
+   [1 0 0 0])
+  ("helm-projectile" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("kbd" .
+   [1 0 0])
+  ("global-set-key" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("auto-mode-alist" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
   ("add-to-list" .
    [0 0 0 0 0 0 0 0 0 1 0])
-  ("auto-mode-alist" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])))
+  ("textile-mode" .
+   [0 0 0 0 0 0 0 0 0 0 1 1])
+  ("require" .
+   [1 0 0 0 0 0 0])
+  ("yasnippet" .
+   [1 0 0 0 0 0 0 0 0])
+  ("projectile-global-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])))

@@ -30,7 +30,7 @@
                             rvm
                             textile-mode
                             ample-theme
-                            expand-region
+                            expand-region 
                             php-mode)
   "Default packages")
 
@@ -63,7 +63,7 @@
     (kill-this-buffer)
     (select-window win-curr)))
 
-(global-set-key (kbd "C-x K") 'other-window-kill-buffer)
+(global-set-key (kbd "C-x C-k") 'other-window-kill-buffer)
 ;; wrap lines by words
 (global-visual-line-mode t)
 
@@ -133,6 +133,7 @@
 
 ;; projectile settings
 (projectile-global-mode)
+(setq projectile-enable-caching t)
 
 ;; remove toolbars and other stuff
 (when (window-system)
@@ -150,6 +151,8 @@
 
 ;; hotkey for helm-mini
 (global-set-key (kbd "<f7>") 'helm-mini)
+;; hotkey for helm-projectile
+(global-set-key (kbd "<f8>") 'helm-projectile)
 
 ;; hook for projectile-rails
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
