@@ -1,5 +1,8 @@
 /*
 /*/
 !/.emacs.d/
+/.emacs.d/projectile.cache
+/.emacs.d/elpa
+/.emacs.d/.cask
+/.emacs.d/*~
 !.gitignore
-!.emacs
