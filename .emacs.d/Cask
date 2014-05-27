@@ -22,6 +22,11 @@
 (depends-on "textile-mode")
 (depends-on "expand-region")
 (depends-on "php-mode")
+(depends-on "tern")
+(depends-on "tern-auto-complete")
+(depends-on "emmet-mode")
+(depends-on "web-mode")
+(depends-on "scss-mode")
 
 ;; Eye-candy
 (depends-on "monokai-theme")

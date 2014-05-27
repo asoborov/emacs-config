@@ -5,7 +5,6 @@
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 
-
 ;; ==============================
 ;; REQUIRES
 ;; ==============================
@@ -197,8 +196,10 @@
  '(custom-safe-themes (quote ("60f04e478dedc16397353fb9f33f0d895ea3dab4f581307fbf0aa2f07e658a40" "ed81411169b1b3e3d4cfc39b09d68ea13e0ff7708dc5b9d0bedb319e071968ad" "bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default)))
  '(display-battery-mode t)
  '(display-time-mode t)
+ '(emmet-preview-default nil)
  '(fci-rule-color "#efefef")
  '(jabber-roster-line-format " %c %-25n %u %-8s  %S")
+ '(scss-compile-at-save nil)
  '(tool-bar-mode nil)
  '(tool-bar-position (quote top))
  '(vc-annotate-background nil)
